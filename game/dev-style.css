@@ -1,0 +1,13 @@
+#dev-container {
+    position: fixed;
+    top: 0px;
+    left:2.5%;
+    width: 20%;
+    margin: 5px;
+    padding: 5px;
+    border: 3px dashed gray;
+}
+
+#dev-container button{
+    margin-right: 3px;
+}

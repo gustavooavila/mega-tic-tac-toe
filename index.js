@@ -18,6 +18,7 @@ const server = http.createServer((req, res) => {
     const requested_path = path.resolve(path.join(content_root, req.url));
 
     if(fs.existsSync(requested_path) && fs.statSync(requested_path).isFile()) {
+        console.log(`${requested_path}`)
         const file_extension = path.extname(requested_path).replace(".", "");
         const file_contents = fs.readFileSync(requested_path);
 

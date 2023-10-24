@@ -1,0 +1,83 @@
+.game-container {
+    width: 50%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+
+    margin: 0 auto;
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+
+    transform-origin: center;
+    transition: all .5s linear;
+}
+
+.board .line{
+    flex: 4;
+    display: flex;
+    border-bottom: 9px solid black;
+}
+.board .line:last-child{
+    border-bottom: 0px;
+}
+
+.board .line .column{
+    flex: 4;
+    aspect-ratio: 1/1;
+    border-right: 9px solid black;
+}
+.board .board .line, .board .board .line .column{
+    border-width: 3px;
+}
+.board .line .column:last-child{
+    border-right: 0px;
+}
+
+.cell {
+    aspect-ratio: 1/1;
+    margin: 15px;
+}
+
+.game-container.top-left .board{
+    transform: translate(calc(100% + 30px), calc(100% + 30px)) scale(3.1);
+}
+
+.game-container.top-middle .board{
+    transform: translate(0, calc(100% + 30px)) scale(3.1);
+}
+
+.game-container.top-right .board{
+    transform: translate(calc(-100% - 32px), calc(100% + 30px)) scale(3.1);
+}
+
+.game-container.middle-left .board{
+    transform: translate(calc(100% + 30px), 0) scale(3.1);
+}
+
+.game-container.middle .board{
+    transform: scale(3.1);
+}
+
+.game-container.middle-right .board{
+    transform: translate(calc(-100% - 32px), 0) scale(3.1);
+}
+
+
+.game-container.bottom-left .board{
+    transform: translate(calc(100% + 30px), calc(-100% - 32px)) scale(3.1);
+}
+
+.game-container.bottom-middle .board{
+    transform: translate(0, calc(-100% - 32px)) scale(3.1);
+}
+
+.game-container.bottom-right .board{
+    transform: translate(calc(-100% - 32px), calc(-100% - 32px)) scale(3.1);
+}
+
+
+.game-container .board .board{
+    transform: scale(1);
+}
